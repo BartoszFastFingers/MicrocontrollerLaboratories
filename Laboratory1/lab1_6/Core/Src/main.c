@@ -32,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MAX_ARR 9999
+#define MAX_ARR 4999
 #define MIN_ARR 10
 /* USER CODE END PD */
 
