@@ -1,0 +1,62 @@
+2025-10-25 01:24:41,801 [INFO] WebApp:403 - JxBrowser engine has been closed 
+2025-10-25 01:25:00,206 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 408594504 Bytes (1073741824)
+2025-10-25 01:25:00,634 [ERROR] IocParser:95 - Exception caught: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+2025-10-25 01:25:01,701 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 443449704 Bytes (1073741824)
+2025-10-25 01:25:02,727 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 480672104 Bytes (1073741824)
+2025-10-25 01:25:02,831 [ERROR] IocParser:95 - Exception caught: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: MEMORYMAP
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8WBA5
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: PWR
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ICACHE
+2025-10-25 01:25:03,159 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NUCLEO-WBA52CG
+2025-10-25 01:25:03,160 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-10-25 01:25:03,162 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2025-10-25 01:25:03,236 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\license.tmp_save
+2025-10-25 01:25:03,480 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\license.tmp
+2025-10-25 01:25:03,516 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\gpio.tmp_save
+2025-10-25 01:25:03,670 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\gpio.tmp
+2025-10-25 01:25:03,709 [WARN] IPConfigManager:103 - WARNING: Missing Config File for MEMORYMAP ip!!
+2025-10-25 01:25:03,709 [WARN] IP:2250 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2025-10-25 01:25:03,870 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\cortex.tmp_save
+2025-10-25 01:25:03,990 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\cortex.tmp
+2025-10-25 01:25:04,025 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_nucleo_conf.h_save
+2025-10-25 01:25:04,128 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_nucleo_conf.h
+2025-10-25 01:25:04,136 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_inc.tmp_save
+2025-10-25 01:25:04,212 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_inc.tmp
+2025-10-25 01:25:04,212 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_vars.tmp_save
+2025-10-25 01:25:04,290 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_vars.tmp
+2025-10-25 01:25:04,300 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_init.tmp_save
+2025-10-25 01:25:04,373 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_init.tmp
+2025-10-25 01:25:04,373 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_before_while.tmp_save
+2025-10-25 01:25:04,454 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_before_while.tmp
+2025-10-25 01:25:04,461 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_inside_while.tmp_save
+2025-10-25 01:25:04,530 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_inside_while.tmp
+2025-10-25 01:25:04,537 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_fct.tmp_save
+2025-10-25 01:25:04,600 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_fct.tmp
+2025-10-25 01:25:04,607 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_gpio.tmp_save
+2025-10-25 01:25:04,673 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\bsp_common_demo_gpio.tmp
+2025-10-25 01:25:04,700 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\stm32wbaxx_it.c_save
+2025-10-25 01:25:05,082 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\stm32wbaxx_it.c
+2025-10-25 01:25:05,090 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_it.h_save
+2025-10-25 01:25:05,160 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_it.h
+2025-10-25 01:25:05,183 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\stm32wbaxx_hal_msp.c_save
+2025-10-25 01:25:05,293 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\stm32wbaxx_hal_msp.c
+2025-10-25 01:25:05,301 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\system.tmp_save
+2025-10-25 01:25:05,366 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\MXTmpFiles\system.tmp
+2025-10-25 01:25:05,382 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_hal_conf.h_save
+2025-10-25 01:25:05,458 [INFO] CodeEngine:345 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\stm32wbaxx_hal_conf.h
+2025-10-25 01:25:05,490 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-10-25 01:25:05,491 [WARN] CodeGenerator:4259 - IP not found : null
+2025-10-25 01:25:05,499 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\main.h_save
+2025-10-25 01:25:05,639 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Inc\main.h
+2025-10-25 01:25:05,648 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\main.c_save
+2025-10-25 01:25:05,803 [INFO] CodeEngine:289 - Generated code: C:\Users\barte\Desktop\lab3\lab3_1\Core\Src\main.c
+2025-10-25 01:25:06,257 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 237mS.
+2025-10-25 01:25:06,261 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-10-25 01:25:06,348 [INFO] ConfigFileManager:1595 - The Die is : DIE492
+2025-10-25 01:25:07,106 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 845mS.
+2025-10-25 01:25:07,107 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-10-25 01:25:07,109 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.

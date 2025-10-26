@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="LD1"/>
+		<item value="GPIO_InitStruct.Alternate"/>
+		<item value="TIM1"/>
+		<item value="_weak"/>
+		<item value="exti"/>
+		<item value="ext"/>
+		<item value="htim1"/>
+	</list>
+</section>
