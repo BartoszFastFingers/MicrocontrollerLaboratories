@@ -1,0 +1,81 @@
+18:05:07 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "zad6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad6.elf
+ 
+arm-none-eabi-size  zad6.elf 
+arm-none-eabi-objdump -h -S zad6.elf  > "zad6.list"
+   text	   data	    bss	    dec	    hex	filename
+  43936	    468	   2204	  46608	   b610	zad6.elf
+Finished building: default.size.stdout
+ 
+Finished building: zad6.list
+ 
+18:05:18 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-size  zad6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43936	    468	   2204	  46608	   b610	zad6.elf
+Finished building: default.size.stdout
+ 
+18:06:27 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:50: warning: statement with no effect [-Wunused-value]
+  123 |           for(int i = 0; i < htim1.Init.Period; i+5){
+      |                                                 ~^~
+arm-none-eabi-gcc -o "zad6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad6.elf
+ 
+arm-none-eabi-size  zad6.elf 
+arm-none-eabi-objdump -h -S zad6.elf  > "zad6.list"
+   text	   data	    bss	    dec	    hex	filename
+  43928	    468	   2204	  46600	   b608	zad6.elf
+Finished building: default.size.stdout
+ 
+Finished building: zad6.list
+ 
+18:06:48 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "zad6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad6.elf
+ 
+arm-none-eabi-size  zad6.elf 
+arm-none-eabi-objdump -h -S zad6.elf  > "zad6.list"
+   text	   data	    bss	    dec	    hex	filename
+  43936	    468	   2204	  46608	   b610	zad6.elf
+Finished building: default.size.stdout
+ 
+Finished building: zad6.list
+ 
+18:08:49 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "zad6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad6.elf
+ 
+arm-none-eabi-size  zad6.elf 
+arm-none-eabi-objdump -h -S zad6.elf  > "zad6.list"
+   text	   data	    bss	    dec	    hex	filename
+  43936	    468	   2204	  46608	   b610	zad6.elf
+Finished building: default.size.stdout
+ 
+Finished building: zad6.list
+ 
+18:12:01 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "zad6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad6.elf
+ 
+arm-none-eabi-size  zad6.elf 
+arm-none-eabi-objdump -h -S zad6.elf  > "zad6.list"
+   text	   data	    bss	    dec	    hex	filename
+  43960	    468	   2204	  46632	   b628	zad6.elf
+Finished building: default.size.stdout
+ 
+Finished building: zad6.list
+ 

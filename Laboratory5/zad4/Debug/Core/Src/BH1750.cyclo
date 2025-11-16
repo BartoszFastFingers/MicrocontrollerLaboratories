@@ -1,0 +1,2 @@
+../Core/Src/BH1750.c:12:6:init_bh1750_sensor	7
+../Core/Src/BH1750.c:32:7:read_lux	2
