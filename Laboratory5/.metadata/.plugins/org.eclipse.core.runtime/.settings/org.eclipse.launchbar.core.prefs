@@ -8,3 +8,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:zad2\ Debug/activeLaunchTarget=
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:zad3\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:zad4\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:zad5\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:zad5\ Debug/activeLaunchTarget=null\:---

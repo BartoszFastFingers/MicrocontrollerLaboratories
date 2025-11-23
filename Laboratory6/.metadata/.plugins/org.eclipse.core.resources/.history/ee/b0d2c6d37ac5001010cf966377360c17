@@ -1,0 +1,24 @@
+/*
+ * BMP280.h
+ *
+ *  Created on: Nov 19, 2025
+ *      Author: barte
+ */
+
+#ifndef INC_BMP280_H_
+#define INC_BMP280_H_
+
+#include "spi.h"
+
+typedef struct{
+	GPIO_TypeDef* port;
+
+}pin_t;
+
+typedef struct{
+	SPI_HandleTypeDef* spi;
+
+
+}BMP280;
+
+#endif /* INC_BMP280_H_ */

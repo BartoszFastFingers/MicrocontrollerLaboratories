@@ -59,7 +59,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-volatile uint32_t lux_millilux = 0;
+
 
 int __io_putchar(int ch)
 {
@@ -111,6 +111,7 @@ int main(void)
   HAL_Delay(120);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   float lux = 0;
+  uint32_t lux_millilux = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,7 +133,7 @@ int main(void)
 	lux_millilux = (uint32_t)(lux * 1000.0f);
 
 
-	sprintf(buf, "wynik: %.1f\n", lux);
+	sprintf(buf, "wynik: %d\n", lux_millilux);
 	printf("%s", buf);
 
     /* USER CODE END WHILE */

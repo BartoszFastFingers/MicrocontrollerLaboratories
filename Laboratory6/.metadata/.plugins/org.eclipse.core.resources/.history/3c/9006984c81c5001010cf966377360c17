@@ -1,0 +1,33 @@
+/*
+ * BMP280.h
+ *
+ *  Created on: Nov 19, 2025
+ *      Author: barte
+ */
+
+#ifndef INC_BMP280_H_
+#define INC_BMP280_H_
+
+#include "spi.h"
+#include "gpio.h"
+
+typedef struct{
+	GPIO_TypeDef* port;
+	uint16_t pin;
+}pin_t;
+
+typedef struct{
+	SPI_HandleTypeDef* spi;
+	pin_t cs;
+}BMP280;
+
+void BMP280_init(BMP280* bmp, SPI_HandleTypeDef spi,GPIO_TypeDef* gp_port, uint16_t gp_pin)
+void BMP280_fast_temp_continous_measurment(BMP280* bmp);
+float BMP280_read_temperature(BMP280* bmp);
+
+uint8_t BMP280_ReadReg(BMP280* bmp, uint8_t reg);
+void BMP280_WriteReg(BMP280* bmp, uint8_t reg, uint8_t value);
+
+
+
+#endif /* INC_BMP280_H_ */

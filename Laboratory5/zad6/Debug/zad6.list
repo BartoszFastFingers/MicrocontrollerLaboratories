@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0001792e  00000000  00000000  0004db31  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000f73fc  00000000  00000000  0006545f  2**0
+ 18 .debug_str    000f7421  00000000  00000000  0006545f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  0015c85b  2**0
+ 19 .comment      00000043  00000000  00000000  0015c880  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00006264  00000000  00000000  0015c8a0  2**2
+ 20 .debug_frame  00006264  00000000  00000000  0015c8c4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000052  00000000  00000000  00162b04  2**0
+ 21 .debug_line_str 00000077  00000000  00000000  00162b28  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1558,42 +1558,43 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = B1_Pin;
  8001192:	f44f 5300 	mov.w	r3, #8192	@ 0x2000
  8001196:	617b      	str	r3, [r7, #20]
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
- 8001198:	f44f 1304 	mov.w	r3, #2162688	@ 0x210000
- 800119c:	61bb      	str	r3, [r7, #24]
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 8001198:	2300      	movs	r3, #0
+ 800119a:	61bb      	str	r3, [r7, #24]
   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 800119e:	2300      	movs	r3, #0
- 80011a0:	61fb      	str	r3, [r7, #28]
+ 800119c:	2300      	movs	r3, #0
+ 800119e:	61fb      	str	r3, [r7, #28]
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
- 80011a2:	f107 0314 	add.w	r3, r7, #20
- 80011a6:	4619      	mov	r1, r3
- 80011a8:	480b      	ldr	r0, [pc, #44]	@ (80011d8 <MX_GPIO_Init+0xc8>)
- 80011aa:	f000 fdff 	bl	8001dac <HAL_GPIO_Init>
+ 80011a0:	f107 0314 	add.w	r3, r7, #20
+ 80011a4:	4619      	mov	r1, r3
+ 80011a6:	480c      	ldr	r0, [pc, #48]	@ (80011d8 <MX_GPIO_Init+0xc8>)
+ 80011a8:	f000 fe00 	bl	8001dac <HAL_GPIO_Init>
 
   /*Configure GPIO pin : LD2_Pin */
   GPIO_InitStruct.Pin = LD2_Pin;
- 80011ae:	2320      	movs	r3, #32
- 80011b0:	617b      	str	r3, [r7, #20]
+ 80011ac:	2320      	movs	r3, #32
+ 80011ae:	617b      	str	r3, [r7, #20]
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 80011b2:	2301      	movs	r3, #1
- 80011b4:	61bb      	str	r3, [r7, #24]
+ 80011b0:	2301      	movs	r3, #1
+ 80011b2:	61bb      	str	r3, [r7, #24]
   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 80011b6:	2300      	movs	r3, #0
- 80011b8:	61fb      	str	r3, [r7, #28]
+ 80011b4:	2300      	movs	r3, #0
+ 80011b6:	61fb      	str	r3, [r7, #28]
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 80011ba:	2300      	movs	r3, #0
- 80011bc:	623b      	str	r3, [r7, #32]
+ 80011b8:	2300      	movs	r3, #0
+ 80011ba:	623b      	str	r3, [r7, #32]
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
- 80011be:	f107 0314 	add.w	r3, r7, #20
- 80011c2:	4619      	mov	r1, r3
- 80011c4:	f04f 4090 	mov.w	r0, #1207959552	@ 0x48000000
- 80011c8:	f000 fdf0 	bl	8001dac <HAL_GPIO_Init>
+ 80011bc:	f107 0314 	add.w	r3, r7, #20
+ 80011c0:	4619      	mov	r1, r3
+ 80011c2:	f04f 4090 	mov.w	r0, #1207959552	@ 0x48000000
+ 80011c6:	f000 fdf1 	bl	8001dac <HAL_GPIO_Init>
 
 }
- 80011cc:	bf00      	nop
- 80011ce:	3728      	adds	r7, #40	@ 0x28
- 80011d0:	46bd      	mov	sp, r7
- 80011d2:	bd80      	pop	{r7, pc}
+ 80011ca:	bf00      	nop
+ 80011cc:	3728      	adds	r7, #40	@ 0x28
+ 80011ce:	46bd      	mov	sp, r7
+ 80011d0:	bd80      	pop	{r7, pc}
+ 80011d2:	bf00      	nop
  80011d4:	40021000 	.word	0x40021000
  80011d8:	48000800 	.word	0x48000800
 
@@ -1912,35 +1913,35 @@ int main(void)
   bool is_measured = false;
  800139a:	2300      	movs	r3, #0
  800139c:	f887 304f 	strb.w	r3, [r7, #79]	@ 0x4f
-  /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
 
-	  if(!is_measured)
+
+		  if(!is_measured)
  80013a0:	f897 304f 	ldrb.w	r3, [r7, #79]	@ 0x4f
  80013a4:	f083 0301 	eor.w	r3, r3, #1
  80013a8:	b2db      	uxtb	r3, r3
  80013aa:	2b00      	cmp	r3, #0
  80013ac:	d02e      	beq.n	800140c <main+0xac>
-		  for(int i = 0; i < htim1.Init.Period; i+=5){
+			  for(int i = 0; i < htim1.Init.Period; i+=5){
  80013ae:	2300      	movs	r3, #0
  80013b0:	64bb      	str	r3, [r7, #72]	@ 0x48
  80013b2:	e026      	b.n	8001402 <main+0xa2>
-			  char buf[64];
-			  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, i);
+				  char buf[64];
+				  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, i);
  80013b4:	4b18      	ldr	r3, [pc, #96]	@ (8001418 <main+0xb8>)
  80013b6:	681b      	ldr	r3, [r3, #0]
  80013b8:	6cba      	ldr	r2, [r7, #72]	@ 0x48
  80013ba:	635a      	str	r2, [r3, #52]	@ 0x34
-			  HAL_Delay(200);
+				  HAL_Delay(200);
  80013bc:	20c8      	movs	r0, #200	@ 0xc8
  80013be:	f000 fbeb 	bl	8001b98 <HAL_Delay>
-			  lux = read_lux(&hi2c1);
+				  lux = read_lux(&hi2c1);
  80013c2:	4814      	ldr	r0, [pc, #80]	@ (8001414 <main+0xb4>)
  80013c4:	f7ff fe72 	bl	80010ac <read_lux>
  80013c8:	ed87 0a11 	vstr	s0, [r7, #68]	@ 0x44
-			  sprintf(buf, "%d,%.1f\n", i, lux);
+				  sprintf(buf, "%d,%.1f\n", i, lux);
  80013cc:	6c78      	ldr	r0, [r7, #68]	@ 0x44
  80013ce:	f7ff f8bb 	bl	8000548 <__aeabi_f2d>
  80013d2:	4602      	mov	r2, r0
@@ -1950,7 +1951,7 @@ int main(void)
  80013dc:	6cba      	ldr	r2, [r7, #72]	@ 0x48
  80013de:	490f      	ldr	r1, [pc, #60]	@ (800141c <main+0xbc>)
  80013e0:	f005 fd5c 	bl	8006e9c <siprintf>
-			  HAL_UART_Transmit(&huart2, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
+				  HAL_UART_Transmit(&huart2, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
  80013e4:	1d3b      	adds	r3, r7, #4
  80013e6:	4618      	mov	r0, r3
  80013e8:	f7fe ff42 	bl	8000270 <strlen>
@@ -1960,7 +1961,7 @@ int main(void)
  80013f2:	f04f 33ff 	mov.w	r3, #4294967295
  80013f6:	480a      	ldr	r0, [pc, #40]	@ (8001420 <main+0xc0>)
  80013f8:	f004 f8ce 	bl	8005598 <HAL_UART_Transmit>
-		  for(int i = 0; i < htim1.Init.Period; i+=5){
+			  for(int i = 0; i < htim1.Init.Period; i+=5){
  80013fc:	6cbb      	ldr	r3, [r7, #72]	@ 0x48
  80013fe:	3305      	adds	r3, #5
  8001400:	64bb      	str	r3, [r7, #72]	@ 0x48
@@ -1974,7 +1975,7 @@ int main(void)
 	  is_measured = true;
  800140c:	2301      	movs	r3, #1
  800140e:	f887 304f 	strb.w	r3, [r7, #79]	@ 0x4f
-	  if(!is_measured)
+		  if(!is_measured)
  8001412:	e7c5      	b.n	80013a0 <main+0x40>
  8001414:	200001f0 	.word	0x200001f0
  8001418:	20000248 	.word	0x20000248

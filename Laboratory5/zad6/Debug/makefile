@@ -60,8 +60,8 @@ all: main-build
 main-build: zad6.elf secondary-outputs
 
 # Tool invocations
-zad6.elf zad6.map: $(OBJS) $(USER_OBJS) C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "zad6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\sm_lab5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+zad6.elf zad6.map: $(OBJS) $(USER_OBJS) C:\Users\barte\Desktop\lab5\MicrocontrollerLaboratories\Laboratory5\zad6\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "zad6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\lab5\MicrocontrollerLaboratories\Laboratory5\zad6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,13 @@
+/*
+ * BMP280.h
+ *
+ *  Created on: Nov 19, 2025
+ *      Author: barte
+ */
+
+#ifndef INC_BMP280_H_
+#define INC_BMP280_H_
+
+#include "spi.h"
+
+#endif /* INC_BMP280_H_ */

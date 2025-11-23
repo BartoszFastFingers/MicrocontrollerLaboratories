@@ -1,0 +1,10 @@
+08:54:23 **** Incremental Build of configuration Debug for project zad2 ****
+make -j28 all 
+arm-none-eabi-size  zad2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  39224	    468	   2140	  41832	   a368	zad2.elf
+Finished building: default.size.stdout
+ 
+
+08:54:24 Build Finished. 0 errors, 0 warnings. (took 430ms)
+

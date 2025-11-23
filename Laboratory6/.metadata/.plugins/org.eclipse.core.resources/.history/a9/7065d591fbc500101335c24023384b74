@@ -1,0 +1,51 @@
+/*
+ * BMP280.h
+ *
+ *  Created on: Nov 19, 2025
+ *      Author: barte
+ */
+
+#ifndef INC_BMP280_H_
+#define INC_BMP280_H_
+
+#include "spi.h"
+#include "gpio.h"
+
+#define BMP_TEMP_XLSB   	0xFC
+#define BMP_TEMP_LSB    	0xFB
+#define BMP_TEMP_MSB    	0xFA
+
+#define BMP_PRESS_XLSB  	0xF9
+#define BMP_PRESS_LSB   	0xF8
+#define BMP_PRESS_MSB   	0xF7
+
+#define BMP_CONFIG      	0xF5
+#define BMP_CTRL_MEAS   	0xF4
+#define BMP_STATUS      	0xF3
+#define BMP_RESET       	0xE0
+#define BMP_ID         		0xD0
+
+typedef struct{
+	GPIO_TypeDef* port;
+	uint16_t pin;
+}pin_t;
+
+typedef struct{
+	SPI_HandleTypeDef* spi;
+	pin_t cs;
+	uint16_t dig_T[3];
+	uint16_t dig_P[9];
+	int32_t t_fine;
+}BMP280;
+
+void BMP280_init(BMP280* bmp, SPI_HandleTypeDef* spi,GPIO_TypeDef* gp_port, uint16_t gp_pin);
+void BMP280_fast_temp_continous_measurment(BMP280* bmp);
+float BMP280_read_temperature(BMP280* bmp);
+float BMP280_read_pressure(BMP280* bmp);
+uint8_t BMP280_ReadReg(BMP280* bmp, uint8_t reg);
+void BMP280_WriteReg(BMP280* bmp, uint8_t reg, uint8_t value);
+void BMP280_readTempCalibration(BMP280* bmp);
+void BMP280_readPressureCalibration(BMP280* bmp);
+void BMP280_readFullCalibration(BMP280* bmp);
+
+#endif /* INC_BMP280_H_ */

@@ -121,14 +121,15 @@ int main(void)
   while (1)
   {
 
-	  if(!is_measured)
-		  for(int i = 0; i < htim1.Init.Period; i+=5){
-			  char buf[64];
-			  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, i);
-			  HAL_Delay(200);
-			  lux = read_lux(&hi2c1);
-			  sprintf(buf, "%d,%.1f\n", i, lux);
-			  HAL_UART_Transmit(&huart2, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
+
+		  if(!is_measured)
+			  for(int i = 0; i < htim1.Init.Period; i+=5){
+				  char buf[64];
+				  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, i);
+				  HAL_Delay(200);
+				  lux = read_lux(&hi2c1);
+				  sprintf(buf, "%d,%.1f\n", i, lux);
+				  HAL_UART_Transmit(&huart2, (uint8_t*)buf, strlen(buf), HAL_MAX_DELAY);
 		  }
 
 	  is_measured = true;

@@ -1,0 +1,15 @@
+../Core/Src/BMP280.c:63:9:BMP280_ReadReg	32	static
+../Core/Src/BMP280.c:77:6:BMP280_WriteReg	24	static
+../Core/Src/BMP280.c:89:6:BMP280_setSleep_mode	16	static
+../Core/Src/BMP280.c:94:6:BMP280_setStandard_mode	16	static
+../Core/Src/BMP280.c:99:6:BMP280_setPeriod_oneSecond_wihoutFiler	16	static
+../Core/Src/BMP280.c:104:6:BMP280_setPeriod_quarterSecond_wihoutFiler	16	static
+../Core/Src/BMP280.c:109:6:BMP280_readTempCalibration	24	static
+../Core/Src/BMP280.c:128:6:BMP280_readPressureCalibration	24	static
+../Core/Src/BMP280.c:169:6:BMP280_readFullCalibration	16	static
+../Core/Src/BMP280.c:175:6:BMP280_init	24	static
+../Core/Src/BMP280.c:182:6:BMP280_fast_temp_continous_measurment	16	static
+../Core/Src/BMP280.c:190:9:BMP280_read_temp_raw	24	static
+../Core/Src/BMP280.c:200:9:BMP280_read_pressure_raw	24	static
+../Core/Src/BMP280.c:213:7:BMP280_read_temperature	32	static
+../Core/Src/BMP280.c:234:7:BMP280_read_pressure	344	static

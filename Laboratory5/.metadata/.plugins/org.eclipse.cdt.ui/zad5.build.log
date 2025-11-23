@@ -1,10 +1,24 @@
-16:24:35 **** Incremental Build of configuration Debug for project zad5 ****
+17:18:13 **** Incremental Build of configuration Debug for project zad5 ****
 make -j28 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  136 |         sprintf(buf, "wynik: %d\n", lux_millilux);
+      |                              ~^     ~~~~~~~~~~~~
+      |                               |     |
+      |                               int   uint32_t {aka long unsigned int}
+      |                              %ld
+arm-none-eabi-gcc -o "zad5.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barte\Desktop\lab5\MicrocontrollerLaboratories\Laboratory5\zad5\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad5.elf
+ 
 arm-none-eabi-size  zad5.elf 
+arm-none-eabi-objdump -h -S zad5.elf  > "zad5.list"
    text	   data	    bss	    dec	    hex	filename
-  44492	    468	   2204	  47164	   b83c	zad5.elf
+  44476	    468	   2204	  47148	   b82c	zad5.elf
 Finished building: default.size.stdout
  
+Finished building: zad5.list
+ 
 
-16:24:36 Build Finished. 0 errors, 0 warnings. (took 273ms)
+17:18:14 Build Finished. 0 errors, 1 warnings. (took 1s.425ms)
 

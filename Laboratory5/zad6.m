@@ -27,3 +27,5 @@ xlabel("PWM");
 ylabel("LUX");
 title("Charakterystyka PWM → LUX");
 grid on;
+
+clear port
