@@ -1,0 +1,13 @@
+../Core/Src/main.c:66:10:ADC2_Read_Avg	40	static
+../Core/Src/main.c:87:6:ADC3_Read_Multi	32	static
+../Core/Src/main.c:114:10:ADC3_Read	16	static
+../Core/Src/main.c:123:10:ADC_To_mV	16	static
+../Core/Src/main.c:128:10:ADC2_To_mV	16	static
+../Core/Src/main.c:133:6:LED_Line_Update	16	static
+../Core/Src/main.c:149:6:ADC_Send_UART	72	static
+../Core/Src/main.c:156:7:Photo_CalcLux	40	static
+../Core/Src/main.c:172:6:HAL_GPIO_EXTI_Callback	208	static
+../Core/Src/main.c:198:5:main	16	static
+../Core/Src/main.c:256:6:SystemClock_Config	96	static
+../Core/Src/main.c:305:6:PeriphCommonClock_Config	144	static
+../Core/Src/main.c:334:6:Error_Handler	4	static,ignoring_inline_asm

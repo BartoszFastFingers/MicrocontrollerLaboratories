@@ -1,0 +1,6 @@
+../Core/Src/main.c:60:10:ADC3_Read	16	static
+../Core/Src/main.c:69:10:ADC_To_mV	16	static
+../Core/Src/main.c:74:6:LED_Line_Update	16	static
+../Core/Src/main.c:101:5:main	8	static
+../Core/Src/main.c:150:6:SystemClock_Config	96	static
+../Core/Src/main.c:203:6:Error_Handler	4	static,ignoring_inline_asm
