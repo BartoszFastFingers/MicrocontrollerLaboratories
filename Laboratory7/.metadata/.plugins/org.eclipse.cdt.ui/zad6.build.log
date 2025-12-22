@@ -1,0 +1,20 @@
+19:55:46 **** Incremental Build of configuration Debug for project zad6 ****
+make -j28 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32l476rgtx.d" -MT"Core/Startup/startup_stm32l476rgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32l476rgtx.o" "../Core/Startup/startup_stm32l476rgtx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Startup/startup_stm32l476rgtx.s: Assembler messages:
+../Core/Startup/startup_stm32l476rgtx.s:61: Error: bad instruction `reset_handler ldr sp,=_estack'
+/tmp/ccnoYLPY.s: Error: .size expression for Reset_Handler does not evaluate to a constant
+make: *** [Core/Startup/subdir.mk:19: Core/Startup/startup_stm32l476rgtx.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:272:19: warning: unused variable 'temp' [-Wunused-variable]
+  272 |             float temp = NTC_CalcTemp(adc2_mv[1]);
+      |                   ^~~~
+../Core/Src/main.c:271:19: warning: unused variable 'lux' [-Wunused-variable]
+  271 |             float lux = Photo_CalcLux(adc2_mv[0]);
+      |                   ^~~
+"make -j28 all" terminated with exit code 2. Build might be incomplete.
+
+19:55:48 Build Failed. 3 errors, 2 warnings. (took 2s.822ms)
+

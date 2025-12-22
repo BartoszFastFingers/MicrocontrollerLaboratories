@@ -1,0 +1,18 @@
+# pack-refs with: peeled fully-peeled sorted 
+1228c4ad7634133eec822bc10e562dd41700e618 refs/remotes/origin/JonatanAntoni-patch-1
+6c883de0019b90a6a2e551fe1c57d0772d404efe refs/remotes/origin/gh-pages
+7c51acdf980cb2efcccfd80cdc4f592035227011 refs/remotes/origin/iar-toolchain
+d01c3e6e71a82e9bb830b516fe243df6b9a57389 refs/remotes/origin/main
+2eb791f8228828c64175e3bad0ab2ce43d9873d4 refs/tags/v6.0.0
+^1da2c5d27af1f93b2a047ad3db5e563dd83f31ec
+aa984ffa273ea8f4b918952f0ba0516d80e116a8 refs/tags/v6.0.0-dev
+^58d7a7dd18c5b2edd4638537106a75d2ba860088
+960b9c3e22ab12bac4634b3ec39552fd6c89cb20 refs/tags/v6.1.0
+^b0bbb0423b278ca632cfe1474eb227961d835fd2
+b999e39d834a605ed7a3abb43664f8cafe79b125 refs/tags/v6.2.0
+^6f0a58d01aa9bd2feba212097f9afe7acd991d52
+3bfa1c8784074c324fa829db79ed9c584a000842 refs/tags/v6.2.0-dev
+de0af12aac5a990ecf1998bd6f0116964e47570d refs/tags/v6.3.0-dev
+^4b466d3836ebf3b1b50c653058071d34b982f464
+374c24dbd0bec16b6401de34dd42695291cc8ace refs/tags/v6.3.0-rc0
+^d01c3e6e71a82e9bb830b516fe243df6b9a57389

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="for (int i = 0; i &lt; NUM_SAMPLES; i += BLOCK_SIZE) {"/>
+	</list>
+</section>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;zad2/blank_dsp_project.ioc&apos; to &apos;zad2.ioc&apos;" description="Rename resource &apos;blank_dsp_project.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="blank_dsp_project.ioc" name="zad2.ioc" stamp="1766314220661" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;zad2/zad1.ioc&apos; to &apos;zad2.ioc&apos;" description="Rename resource &apos;zad1.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="zad1.ioc" name="zad2.ioc" stamp="1766337508506" updateReferences="true"/>
+</session>

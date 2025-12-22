@@ -1,10 +1,16 @@
-04:57:33 **** Incremental Build of configuration Debug for project zad5 ****
+10:51:13 **** Build of configuration Debug for project zad5 ****
 make -j28 all 
+arm-none-eabi-gcc -o "zad5.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/Bartosz/Desktop/MicrocontrollerLaboratories/Laboratory7/zad5/STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="zad5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: zad5.elf
+ 
 arm-none-eabi-size  zad5.elf 
+arm-none-eabi-objdump -h -S zad5.elf  > "zad5.list"
    text	   data	    bss	    dec	    hex	filename
   44664	    468	   2268	  47400	   b928	zad5.elf
 Finished building: default.size.stdout
  
+Finished building: zad5.list
+ 
 
-04:57:34 Build Finished. 0 errors, 0 warnings. (took 343ms)
+10:51:13 Build Finished. 0 errors, 0 warnings. (took 270ms)
 
