@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATION_PROPERTIES_DIALOG_SECTION">
 		<item key="DIALOG_WIDTH" value="950"/>
-		<item key="DIALOG_HEIGHT" value="1080"/>
+		<item key="DIALOG_HEIGHT" value="990"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|10.0|0|GTK|1|"/>
 	</section>
 	<section name="org.eclipse.debug.ui.SCOPED_SAVE_SELECTION_DIALOG">
@@ -13,9 +13,9 @@
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
 		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1" value="237"/>
 		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2" value="762"/>
-		<item key="org.eclipse.debug.ui.EXPANDED_NODES" value=", "/>
-		<item key="DIALOG_WIDTH" value="800"/>
-		<item key="DIALOG_HEIGHT" value="640"/>
+		<item key="org.eclipse.debug.ui.EXPANDED_NODES" value="com.st.stm32cube.ide.mcu.debug.launch.launchConfigurationType, "/>
+		<item key="DIALOG_WIDTH" value="1250"/>
+		<item key="DIALOG_HEIGHT" value="702"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|10.0|0|GTK|1|"/>
 	</section>
 	<section name="FAVORITES_DIALOG_SECTION">

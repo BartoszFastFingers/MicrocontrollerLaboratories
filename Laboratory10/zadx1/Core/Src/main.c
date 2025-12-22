@@ -135,7 +135,7 @@ int main(void)
   {
 	  printf("%f\n", C_DATA[i]);
   }
-  printf("RMSE = %f\n",rmse);
+  printf("RMSE = %.12f\n",rmse);
 
   if(status == ARM_MATH_SUCCESS && rmse < RMSE_TOL)
   {

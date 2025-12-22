@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         0000876c  08000190  08000190  00001190  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       000004cc  08008900  08008900  00009900  2**3
+  2 .rodata       000004d4  08008900  08008900  00009900  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08008dcc  08008dcc  0000a220  2**0
+  3 .ARM.extab    00000000  08008dd4  08008dd4  0000a220  2**0
                   CONTENTS, READONLY
-  4 .ARM          00000008  08008dcc  08008dcc  00009dcc  2**2
+  4 .ARM          00000008  08008dd4  08008dd4  00009dd4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08008dd4  08008dd4  0000a220  2**0
+  5 .preinit_array 00000000  08008ddc  08008ddc  0000a220  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08008dd4  08008dd4  00009dd4  2**2
+  6 .init_array   00000004  08008ddc  08008ddc  00009ddc  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .fini_array   00000004  08008dd8  08008dd8  00009dd8  2**2
+  7 .fini_array   00000004  08008de0  08008de0  00009de0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         00000220  20000000  08008ddc  0000a000  2**2
+  8 .data         00000220  20000000  08008de4  0000a000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000021c  20000220  08008ffc  0000a220  2**2
+  9 .bss          0000021c  20000220  08009004  0000a220  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  2000043c  08008ffc  0000a43c  2**0
+ 10 ._user_heap_stack 00000604  2000043c  08009004  0000a43c  2**0
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000a220  2**0
                   CONTENTS, READONLY
@@ -1678,7 +1678,7 @@ int main(void)
  800125a:	2b02      	cmp	r3, #2
  800125c:	ddeb      	ble.n	8001236 <main+0x6e>
   }
-  printf("RMSE = %f\n",rmse);
+  printf("RMSE = %.12f\n",rmse);
  800125e:	6878      	ldr	r0, [r7, #4]
  8001260:	f7ff f972 	bl	8000548 <__aeabi_f2d>
  8001264:	4602      	mov	r2, r0
@@ -1726,8 +1726,8 @@ int main(void)
  80012bc:	08008910 	.word	0x08008910
  80012c0:	08008914 	.word	0x08008914
  80012c4:	358637bd 	.word	0x358637bd
- 80012c8:	08008920 	.word	0x08008920
- 80012cc:	0800893c 	.word	0x0800893c
+ 80012c8:	08008924 	.word	0x08008924
+ 80012cc:	08008940 	.word	0x08008940
 
 080012d0 <SystemClock_Config>:
 /**
@@ -2703,7 +2703,7 @@ LoopForever:
   ldr r1, =_edata
  8001730:	20000220 	.word	0x20000220
   ldr r2, =_sidata
- 8001734:	08008ddc 	.word	0x08008ddc
+ 8001734:	08008de4 	.word	0x08008de4
   ldr r2, =_sbss
  8001738:	20000220 	.word	0x20000220
   ldr r4, =_ebss
@@ -4365,7 +4365,7 @@ HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef  *RCC_OscInitStruct)
  80020c0:	e014      	b.n	80020ec <HAL_RCC_OscConfig+0x298>
  80020c2:	bf00      	nop
  80020c4:	40021000 	.word	0x40021000
- 80020c8:	0800895c 	.word	0x0800895c
+ 80020c8:	08008960 	.word	0x08008960
  80020cc:	2000004c 	.word	0x2000004c
  80020d0:	20000050 	.word	0x20000050
  80020d4:	4ba0      	ldr	r3, [pc, #640]	@ (8002358 <HAL_RCC_OscConfig+0x504>)
@@ -5670,7 +5670,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
  80027f6:	bd80      	pop	{r7, pc}
  80027f8:	40022000 	.word	0x40022000
  80027fc:	40021000 	.word	0x40021000
- 8002800:	0800895c 	.word	0x0800895c
+ 8002800:	08008960 	.word	0x08008960
  8002804:	2000004c 	.word	0x2000004c
  8002808:	20000050 	.word	0x20000050
 
@@ -5875,7 +5875,7 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8002910:	4770      	bx	lr
  8002912:	bf00      	nop
  8002914:	40021000 	.word	0x40021000
- 8002918:	08008974 	.word	0x08008974
+ 8002918:	08008978 	.word	0x08008978
  800291c:	00f42400 	.word	0x00f42400
  8002920:	007a1200 	.word	0x007a1200
 
@@ -5924,7 +5924,7 @@ uint32_t HAL_RCC_GetPCLK1Freq(void)
  800295c:	4618      	mov	r0, r3
  800295e:	bd80      	pop	{r7, pc}
  8002960:	40021000 	.word	0x40021000
- 8002964:	0800896c 	.word	0x0800896c
+ 8002964:	08008970 	.word	0x08008970
 
 08002968 <HAL_RCC_GetPCLK2Freq>:
   * @note   Each time PCLK2 changes, this function must be called to update the
@@ -5951,7 +5951,7 @@ uint32_t HAL_RCC_GetPCLK2Freq(void)
  8002988:	4618      	mov	r0, r3
  800298a:	bd80      	pop	{r7, pc}
  800298c:	40021000 	.word	0x40021000
- 8002990:	0800896c 	.word	0x0800896c
+ 8002990:	08008970 	.word	0x08008970
 
 08002994 <RCC_SetFlashLatencyFromMSIRange>:
             voltage range.
@@ -10562,11 +10562,11 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800453c:	e7ee      	b.n	800451c <_printf_float+0x2a4>
  800453e:	bf00      	nop
  8004540:	7fefffff 	.word	0x7fefffff
- 8004544:	080089a8 	.word	0x080089a8
- 8004548:	080089a4 	.word	0x080089a4
- 800454c:	080089b0 	.word	0x080089b0
- 8004550:	080089ac 	.word	0x080089ac
- 8004554:	080089b4 	.word	0x080089b4
+ 8004544:	080089ac 	.word	0x080089ac
+ 8004548:	080089a8 	.word	0x080089a8
+ 800454c:	080089b4 	.word	0x080089b4
+ 8004550:	080089b0 	.word	0x080089b0
+ 8004554:	080089b8 	.word	0x080089b8
  8004558:	6da3      	ldr	r3, [r4, #88]	@ 0x58
  800455a:	f8dd a028 	ldr.w	sl, [sp, #40]	@ 0x28
  800455e:	4553      	cmp	r3, sl
@@ -11044,8 +11044,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80049d4:	2500      	movs	r5, #0
  80049d6:	f104 0619 	add.w	r6, r4, #25
  80049da:	e7f5      	b.n	80049c8 <_printf_i+0x220>
- 80049dc:	080089b6 	.word	0x080089b6
- 80049e0:	080089c7 	.word	0x080089c7
+ 80049dc:	080089ba 	.word	0x080089ba
+ 80049e0:	080089cb 	.word	0x080089cb
 
 080049e4 <_scanf_float>:
  80049e4:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -11440,8 +11440,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8004df2:	2700      	movs	r7, #0
  8004df4:	e62e      	b.n	8004a54 <_scanf_float+0x70>
  8004df6:	bf00      	nop
- 8004df8:	080089d8 	.word	0x080089d8
- 8004dfc:	08008b19 	.word	0x08008b19
+ 8004df8:	080089dc 	.word	0x080089dc
+ 8004dfc:	08008b1d 	.word	0x08008b1d
 
 08004e00 <std>:
  8004e00:	2300      	movs	r3, #0
@@ -12049,10 +12049,10 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800533a:	4798      	blx	r3
  800533c:	3601      	adds	r6, #1
  800533e:	e7f2      	b.n	8005326 <__libc_init_array+0x1e>
- 8005340:	08008dd4 	.word	0x08008dd4
- 8005344:	08008dd4 	.word	0x08008dd4
- 8005348:	08008dd4 	.word	0x08008dd4
- 800534c:	08008dd8 	.word	0x08008dd8
+ 8005340:	08008ddc 	.word	0x08008ddc
+ 8005344:	08008ddc 	.word	0x08008ddc
+ 8005348:	08008ddc 	.word	0x08008ddc
+ 800534c:	08008de0 	.word	0x08008de0
 
 08005350 <__retarget_lock_init_recursive>:
  8005350:	4770      	bx	lr
@@ -12466,15 +12466,15 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8005754:	3fc68a28 	.word	0x3fc68a28
  8005758:	509f79fb 	.word	0x509f79fb
  800575c:	3fd34413 	.word	0x3fd34413
- 8005760:	080089ea 	.word	0x080089ea
- 8005764:	08008a01 	.word	0x08008a01
+ 8005760:	080089ee 	.word	0x080089ee
+ 8005764:	08008a05 	.word	0x08008a05
  8005768:	7ff00000 	.word	0x7ff00000
- 800576c:	080089b5 	.word	0x080089b5
+ 800576c:	080089b9 	.word	0x080089b9
  8005770:	3ff80000 	.word	0x3ff80000
- 8005774:	08008bb0 	.word	0x08008bb0
- 8005778:	08008a59 	.word	0x08008a59
- 800577c:	080089e6 	.word	0x080089e6
- 8005780:	080089b4 	.word	0x080089b4
+ 8005774:	08008bb8 	.word	0x08008bb8
+ 8005778:	08008a5d 	.word	0x08008a5d
+ 800577c:	080089ea 	.word	0x080089ea
+ 8005780:	080089b8 	.word	0x080089b8
  8005784:	f8d9 301c 	ldr.w	r3, [r9, #28]
  8005788:	6018      	str	r0, [r3, #0]
  800578a:	9b03      	ldr	r3, [sp, #12]
@@ -12703,8 +12703,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8005a08:	e9cd 0104 	strd	r0, r1, [sp, #16]
  8005a0c:	e7c4      	b.n	8005998 <_dtoa_r+0x508>
  8005a0e:	bf00      	nop
- 8005a10:	08008bb0 	.word	0x08008bb0
- 8005a14:	08008b88 	.word	0x08008b88
+ 8005a10:	08008bb8 	.word	0x08008bb8
+ 8005a14:	08008b90 	.word	0x08008b90
  8005a18:	3ff00000 	.word	0x3ff00000
  8005a1c:	40240000 	.word	0x40240000
  8005a20:	401c0000 	.word	0x401c0000
@@ -13333,8 +13333,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8006020:	f000 f968 	bl	80062f4 <__multadd>
  8006024:	9002      	str	r0, [sp, #8]
  8006026:	e7eb      	b.n	8006000 <_dtoa_r+0xb70>
- 8006028:	08008a59 	.word	0x08008a59
- 800602c:	080089dd 	.word	0x080089dd
+ 8006028:	08008a5d 	.word	0x08008a5d
+ 800602c:	080089e1 	.word	0x080089e1
 
 08006030 <_free_r>:
  8006030:	b538      	push	{r3, r4, r5, lr}
@@ -13618,8 +13618,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80062a0:	e9c0 3303 	strd	r3, r3, [r0, #12]
  80062a4:	e7f7      	b.n	8006296 <_Balloc+0x66>
  80062a6:	bf00      	nop
- 80062a8:	080089ea 	.word	0x080089ea
- 80062ac:	08008a6a 	.word	0x08008a6a
+ 80062a8:	080089ee 	.word	0x080089ee
+ 80062ac:	08008a6e 	.word	0x08008a6e
 
 080062b0 <_Bfree>:
  80062b0:	b570      	push	{r4, r5, r6, lr}
@@ -13647,8 +13647,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80062e4:	6021      	str	r1, [r4, #0]
  80062e6:	f843 4022 	str.w	r4, [r3, r2, lsl #2]
  80062ea:	bd70      	pop	{r4, r5, r6, pc}
- 80062ec:	080089ea 	.word	0x080089ea
- 80062f0:	08008a6a 	.word	0x08008a6a
+ 80062ec:	080089ee 	.word	0x080089ee
+ 80062f0:	08008a6e 	.word	0x08008a6e
 
 080062f4 <__multadd>:
  80062f4:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
@@ -13702,8 +13702,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8006370:	6125      	str	r5, [r4, #16]
  8006372:	4620      	mov	r0, r4
  8006374:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8006378:	08008a59 	.word	0x08008a59
- 800637c:	08008a6a 	.word	0x08008a6a
+ 8006378:	08008a5d 	.word	0x08008a5d
+ 800637c:	08008a6e 	.word	0x08008a6e
 
 08006380 <__s2b>:
  8006380:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
@@ -13764,8 +13764,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8006404:	f7ff ff76 	bl	80062f4 <__multadd>
  8006408:	e7ee      	b.n	80063e8 <__s2b+0x68>
  800640a:	bf00      	nop
- 800640c:	08008a59 	.word	0x08008a59
- 8006410:	08008a6a 	.word	0x08008a6a
+ 800640c:	08008a5d 	.word	0x08008a5d
+ 8006410:	08008a6e 	.word	0x08008a6e
 
 08006414 <__hi0bits>:
  8006414:	f5b0 3f80 	cmp.w	r0, #65536	@ 0x10000
@@ -13855,8 +13855,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80064ca:	6103      	str	r3, [r0, #16]
  80064cc:	bd10      	pop	{r4, pc}
  80064ce:	bf00      	nop
- 80064d0:	08008a59 	.word	0x08008a59
- 80064d4:	08008a6a 	.word	0x08008a6a
+ 80064d0:	08008a5d 	.word	0x08008a5d
+ 80064d4:	08008a6e 	.word	0x08008a6e
 
 080064d8 <__multiply>:
  80064d8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -13975,8 +13975,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800660e:	e79f      	b.n	8006550 <__multiply+0x78>
  8006610:	3e01      	subs	r6, #1
  8006612:	e7a1      	b.n	8006558 <__multiply+0x80>
- 8006614:	08008a59 	.word	0x08008a59
- 8006618:	08008a6a 	.word	0x08008a6a
+ 8006614:	08008a5d 	.word	0x08008a5d
+ 8006618:	08008a6e 	.word	0x08008a6e
 
 0800661c <__pow5mult>:
  800661c:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
@@ -14044,9 +14044,9 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80066bc:	4630      	mov	r0, r6
  80066be:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
  80066c2:	bf00      	nop
- 80066c4:	08008b7c 	.word	0x08008b7c
- 80066c8:	080089ea 	.word	0x080089ea
- 80066cc:	08008a6a 	.word	0x08008a6a
+ 80066c4:	08008b80 	.word	0x08008b80
+ 80066c8:	080089ee 	.word	0x080089ee
+ 80066cc:	08008a6e 	.word	0x08008a6e
 
 080066d0 <__lshift>:
  80066d0:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
@@ -14125,8 +14125,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800679a:	d8f9      	bhi.n	8006790 <__lshift+0xc0>
  800679c:	e7ea      	b.n	8006774 <__lshift+0xa4>
  800679e:	bf00      	nop
- 80067a0:	08008a59 	.word	0x08008a59
- 80067a4:	08008a6a 	.word	0x08008a6a
+ 80067a0:	08008a5d 	.word	0x08008a5d
+ 80067a4:	08008a6e 	.word	0x08008a6e
 
 080067a8 <__mcmp>:
  80067a8:	690a      	ldr	r2, [r1, #16]
@@ -14262,8 +14262,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80068fa:	3f01      	subs	r7, #1
  80068fc:	e7e7      	b.n	80068ce <__mdiff+0xee>
  80068fe:	bf00      	nop
- 8006900:	08008a59 	.word	0x08008a59
- 8006904:	08008a6a 	.word	0x08008a6a
+ 8006900:	08008a5d 	.word	0x08008a5d
+ 8006904:	08008a6e 	.word	0x08008a6e
 
 08006908 <__ulp>:
  8006908:	b082      	sub	sp, #8
@@ -14413,8 +14413,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8006a86:	f7ff fcc5 	bl	8006414 <__hi0bits>
  8006a8a:	ebc0 1042 	rsb	r0, r0, r2, lsl #5
  8006a8e:	e7e5      	b.n	8006a5c <__d2b+0x74>
- 8006a90:	08008a59 	.word	0x08008a59
- 8006a94:	08008a6a 	.word	0x08008a6a
+ 8006a90:	08008a5d 	.word	0x08008a5d
+ 8006a94:	08008a6e 	.word	0x08008a6e
 
 08006a98 <__ratio>:
  8006a98:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -14812,8 +14812,8 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8006e48:	e782      	b.n	8006d50 <_strtod_l+0x190>
  8006e4a:	f04f 0c01 	mov.w	ip, #1
  8006e4e:	e7f8      	b.n	8006e42 <_strtod_l+0x282>
- 8006e50:	08008c8c 	.word	0x08008c8c
- 8006e54:	08008ac3 	.word	0x08008ac3
+ 8006e50:	08008c94 	.word	0x08008c94
+ 8006e54:	08008ac7 	.word	0x08008ac7
  8006e58:	7ff00000 	.word	0x7ff00000
  8006e5c:	9a19      	ldr	r2, [sp, #100]	@ 0x64
  8006e5e:	1c51      	adds	r1, r2, #1
@@ -15103,13 +15103,13 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8007134:	f04f 0b00 	mov.w	fp, #0
  8007138:	6013      	str	r3, [r2, #0]
  800713a:	e76b      	b.n	8007014 <_strtod_l+0x454>
- 800713c:	080089b1 	.word	0x080089b1
- 8007140:	08008c78 	.word	0x08008c78
- 8007144:	080089a9 	.word	0x080089a9
- 8007148:	080089e0 	.word	0x080089e0
- 800714c:	08008b19 	.word	0x08008b19
- 8007150:	08008bb0 	.word	0x08008bb0
- 8007154:	08008b88 	.word	0x08008b88
+ 800713c:	080089b5 	.word	0x080089b5
+ 8007140:	08008c80 	.word	0x08008c80
+ 8007144:	080089ad 	.word	0x080089ad
+ 8007148:	080089e4 	.word	0x080089e4
+ 800714c:	08008b1d 	.word	0x08008b1d
+ 8007150:	08008bb8 	.word	0x08008bb8
+ 8007154:	08008b90 	.word	0x08008b90
  8007158:	7ff00000 	.word	0x7ff00000
  800715c:	7ca00000 	.word	0x7ca00000
  8007160:	7fefffff 	.word	0x7fefffff
@@ -15395,7 +15395,7 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800740e:	2322      	movs	r3, #34	@ 0x22
  8007410:	6013      	str	r3, [r2, #0]
  8007412:	e603      	b.n	800701c <_strtod_l+0x45c>
- 8007414:	08008ca0 	.word	0x08008ca0
+ 8007414:	08008ca8 	.word	0x08008ca8
  8007418:	fffffc02 	.word	0xfffffc02
  800741c:	39500000 	.word	0x39500000
  8007420:	7ff00000 	.word	0x7ff00000
@@ -15821,7 +15821,7 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  800787c:	d1f6      	bne.n	800786c <_strtol_l.isra.0+0xd8>
  800787e:	f8c8 1000 	str.w	r1, [r8]
  8007882:	e794      	b.n	80077ae <_strtol_l.isra.0+0x1a>
- 8007884:	08008cc9 	.word	0x08008cc9
+ 8007884:	08008cd1 	.word	0x08008cd1
 
 08007888 <_strtol_r>:
  8007888:	f7ff bf84 	b.w	8007794 <_strtol_l.isra.0>
@@ -16101,11 +16101,11 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8007b20:	4638      	mov	r0, r7
  8007b22:	f7fc fe41 	bl	80047a8 <_printf_i>
  8007b26:	e7ed      	b.n	8007b04 <_svfiprintf_r+0x1c0>
- 8007b28:	08008ac5 	.word	0x08008ac5
- 8007b2c:	08008acf 	.word	0x08008acf
+ 8007b28:	08008ac9 	.word	0x08008ac9
+ 8007b2c:	08008ad3 	.word	0x08008ad3
  8007b30:	08004279 	.word	0x08004279
  8007b34:	0800788d 	.word	0x0800788d
- 8007b38:	08008acb 	.word	0x08008acb
+ 8007b38:	08008acf 	.word	0x08008acf
 
 08007b3c <__sfputc_r>:
  8007b3c:	6893      	ldr	r3, [r2, #8]
@@ -16371,11 +16371,11 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8007da4:	4630      	mov	r0, r6
  8007da6:	f7fc fcff 	bl	80047a8 <_printf_i>
  8007daa:	e7e4      	b.n	8007d76 <_vfiprintf_r+0x1e6>
- 8007dac:	08008ac5 	.word	0x08008ac5
- 8007db0:	08008acf 	.word	0x08008acf
+ 8007dac:	08008ac9 	.word	0x08008ac9
+ 8007db0:	08008ad3 	.word	0x08008ad3
  8007db4:	08004279 	.word	0x08004279
  8007db8:	08007b6b 	.word	0x08007b6b
- 8007dbc:	08008acb 	.word	0x08008acb
+ 8007dbc:	08008acf 	.word	0x08008acf
 
 08007dc0 <__sflush_r>:
  8007dc0:	f9b1 200c 	ldrsh.w	r2, [r1, #12]
@@ -16735,9 +16735,9 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80080d0:	e7f3      	b.n	80080ba <__assert_func+0x12>
  80080d2:	bf00      	nop
  80080d4:	20000064 	.word	0x20000064
- 80080d8:	08008ade 	.word	0x08008ade
- 80080dc:	08008aeb 	.word	0x08008aeb
- 80080e0:	08008b19 	.word	0x08008b19
+ 80080d8:	08008ae2 	.word	0x08008ae2
+ 80080dc:	08008aef 	.word	0x08008aef
+ 80080e0:	08008b1d 	.word	0x08008b1d
 
 080080e4 <_calloc_r>:
  80080e4:	b570      	push	{r4, r5, r6, lr}
@@ -17125,9 +17125,9 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  8008486:	2b00      	cmp	r3, #0
  8008488:	d1dd      	bne.n	8008446 <__gethex+0x26a>
  800848a:	e7ee      	b.n	800846a <__gethex+0x28e>
- 800848c:	08008ac3 	.word	0x08008ac3
- 8008490:	08008a59 	.word	0x08008a59
- 8008494:	08008b1a 	.word	0x08008b1a
+ 800848c:	08008ac7 	.word	0x08008ac7
+ 8008490:	08008a5d 	.word	0x08008a5d
+ 8008494:	08008b1e 	.word	0x08008b1e
  8008498:	1e6f      	subs	r7, r5, #1
  800849a:	f1b9 0f00 	cmp.w	r9, #0
  800849e:	d130      	bne.n	8008502 <__gethex+0x326>
@@ -17262,7 +17262,7 @@ __STATIC_FORCEINLINE arm_status arm_sqrt_f32(
  80085f2:	42b0      	cmp	r0, r6
  80085f4:	dbe7      	blt.n	80085c6 <__gethex+0x3ea>
  80085f6:	e7f0      	b.n	80085da <__gethex+0x3fe>
- 80085f8:	08008a59 	.word	0x08008a59
+ 80085f8:	08008a5d 	.word	0x08008a5d
 
 080085fc <L_shift>:
  80085fc:	f1c2 0208 	rsb	r2, r2, #8

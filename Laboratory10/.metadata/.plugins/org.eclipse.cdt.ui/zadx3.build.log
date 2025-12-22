@@ -1,0 +1,10 @@
+18:57:03 **** Incremental Build of configuration Debug for project zadx3 ****
+make -j28 all 
+arm-none-eabi-size  zadx3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18064	     76	   1892	  20032	   4e40	zadx3.elf
+Finished building: default.size.stdout
+ 
+
+18:57:03 Build Finished. 0 errors, 0 warnings. (took 319ms)
+

@@ -23,3 +23,25 @@
 2025-12-22 15:17:17,912 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
 2025-12-22 15:17:17,913 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
 2025-12-22 15:17:17,913 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-12-22 18:56:21,452 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "SWV client thread" java.lang.NullPointerException: Cannot invoke "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.isDebugging()" because "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.plugin" is null
+2025-12-22 18:56:21,455 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.debugTrace(SWVPlugin.java:85)
+2025-12-22 18:56:21,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.TRACE(SWVClient.java:768)
+2025-12-22 18:56:21,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.readByte(SWVClient.java:296)
+2025-12-22 18:56:21,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.getNextByte(SWVClient.java:277)
+2025-12-22 18:56:21,457 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:313)
+2025-12-22 18:56:30,636 [INFO] Activator:176 - 
+
+
+2025-12-22 18:56:30,638 [INFO] Activator:177 - !SESSION log4j initialized
+2025-12-22 18:56:33,758 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-12-22 18:57:23,567 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2025-12-22 18:59:57,801 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "SWV client thread" java.lang.NullPointerException: Cannot invoke "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.isDebugging()" because "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.plugin" is null
+2025-12-22 18:59:57,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.debugTrace(SWVPlugin.java:85)
+2025-12-22 18:59:57,803 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.TRACE(SWVClient.java:768)
+2025-12-22 18:59:57,803 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.createProtocolPacket(SWVClient.java:472)
+2025-12-22 18:59:57,803 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:370)
+2025-12-22 19:20:42,338 [INFO] Activator:176 - 
+
+
+2025-12-22 19:20:42,339 [INFO] Activator:177 - !SESSION log4j initialized
+2025-12-22 19:20:45,433 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
