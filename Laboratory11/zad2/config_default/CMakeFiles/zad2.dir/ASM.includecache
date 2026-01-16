@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad2/startup_stm32l476xx.s
+

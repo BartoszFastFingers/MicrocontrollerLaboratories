@@ -1,0 +1,7 @@
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/CMakeFiles/zad1.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/CMakeFiles/edit_cache.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/CMakeFiles/rebuild_cache.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/cmake/stm32cubemx/CMakeFiles/CMSIS-DSP.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/Bartosz/Desktop/STUDIA/Systemy Mikroprocesorowe/MicrocontrollerLaboratories/Laboratory11/zad1/config_default/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
